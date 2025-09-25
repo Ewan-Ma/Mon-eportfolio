@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Ewan Maurel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    @keyframes fadeIn { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+    .fade-in { animation:fadeIn 1s ease forwards; opacity:0; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- MENU NAVIGATION -->
+  <nav class="bg-gray-900 text-white px-6 py-4 sticky top-0 z-50 shadow">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#home" class="text-xl font-bold hover:text-blue-400">ENSEEIHT e-Portfolio</a>
+      <ul class="flex space-x-6">
+
+        <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
+
+        <!-- Engineering Course -->
+        <li class="relative group">
+          <button class="hover:text-blue-400 flex items-center">Engineering Course ▾</button>
+          <ul class="absolute left-0 mt-2 w-44 bg-gray-800 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+            <li><a href="projects.html" class="block px-4 py-2 hover:bg-gray-700">Projects</a></li>
+            <li><a href="#production" class="block px-4 py-2 hover:bg-gray-700">Production</a></li>
+          </ul>
+        </li>
+
+        <!-- International Mobility -->
+        <li class="relative group">
+          <button class="hover:text-blue-400 flex items-center">International Mobility ▾</button>
+          <ul class="absolute left-0 mt-2 w-52 bg-gray-800 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+            <li><a href="#communication" class="block px-4 py-2 hover:bg-gray-700">Communication & English</a></li>
+            <li><a href="#lv2" class="block px-4 py-2 hover:bg-gray-700">LV2 (Sign Language)</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#sustainability" class="hover:text-blue-400">Sustainability</a></li>
+        <li><a href="#activities" class="hover:text-blue-400">Sport & Activities</a></li>
+        <li><a href="#career" class="hover:text-blue-400">Career Dev</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="bg-gradient-to-r from-blue-700 to-purple-700 text-white py-10 fade-in">
+    <div class="container mx-auto text-center">
+      <h1 class="text-5xl font-bold">Mes Projets</h1>
+      <p class="mt-4 text-lg">Voici quelques projets réalisés durant ma formation</p>
+    </div>
+  </header>
+
+  <!-- PROJETS -->
+  <section class="py-16 container mx-auto px-6 fade-in">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-6 fade-in">
+        <i class="fas fa-microchip fa-2x mb-3 text-blue-600"></i>
+        <h3 class="text-xl font-semibold mb-2">Contrôle de capteurs</h3>
+        <p>Acquisition en temps réel avec Python & Arduino.</p>
+        <a href="#" class="text-blue-600 hover:underline">Voir le projet</a>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-6 fade-in">
+        <i class="fas fa-cogs fa-2x mb-3 text-purple-600"></i>
+        <h3 class="text-xl font-semibold mb-2">Robot Doosan</h3>
+        <p>Récupération de données de position & force via Modbus.</p>
+        <a href="#" class="text-blue-600 hover:underline">Voir le projet</a>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-6 fade-in">
+        <i class="fas fa-mobile-alt fa-2x mb-3 text-green-600"></i>
+        <h3 class="text-xl font-semibold mb-2">App Android</h3>
+        <p>Application Kotlin (Tinder de la galerie photos).</p>
+        <a href="#" class="text-blue-600 hover:underline">Voir le projet</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-800 text-gray-400 py-6 text-center fade-in">
+    © 2025 Ewan Maurel - ePortfolio ENSEEIHT
+  </footer>
+
+  <!-- JS Fade-in + Scroll -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold:0.1, rootMargin:"0px 0px -50px 0px" };
+    const appearOnScroll = new IntersectionObserver((entries, observer)=>{
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting) return;
+        entry.target.style.opacity=1;
+        entry.target.style.transform='translateY(0)';
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader=>appearOnScroll.observe(fader));
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+      });
+    });
+  </script>
+
+</body>
+</html>
