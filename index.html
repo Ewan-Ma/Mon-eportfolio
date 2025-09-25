@@ -3,88 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon e-Portfolio</title>
+  <title>Bienvenue - ENSEEIHT Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
-  <!-- HEADER -->
-  <header class="bg-gray-900 text-white py-10">
-    <div class="container mx-auto text-center">
-      <h1 class="text-4xl font-bold">Salut, moi c’est [Ton Prénom]</h1>
-      <p class="mt-3 text-lg">Étudiant en BUT Mesures Physiques | Passionné de robotique et développement</p>
-      <div class="mt-5 space-x-4">
-        <a href="#projects" class="px-5 py-2 bg-blue-600 rounded-lg hover:bg-blue-700">Voir mes projets</a>
-        <a href="#contact" class="px-5 py-2 bg-gray-700 rounded-lg hover:bg-gray-800">Me contacter</a>
-      </div>
+  <!-- NAVBAR -->
+  <nav class="bg-gray-900 text-white px-6 py-4 sticky top-0 z-50 shadow">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold hover:text-blue-400">ENSEEIHT Portfolio</a>
+      <ul class="flex space-x-6">
+        <li><a href="index.html" class="hover:text-blue-400">Bienvenue</a></li>
+        <li class="group relative">
+          <a href="engineering.html" class="hover:text-blue-400">Engineering Course ▾</a>
+          <ul class="absolute left-0 mt-2 hidden group-hover:block bg-gray-800 rounded shadow-lg">
+            <li><a href="projects.html" class="block px-4 py-2 hover:bg-gray-700">Projects</a></li>
+            <li><a href="production.html" class="block px-4 py-2 hover:bg-gray-700">Production</a></li>
+          </ul>
+        </li>
+        <li class="group relative">
+          <a href="mobility.html" class="hover:text-blue-400">International Mobility ▾</a>
+          <ul class="absolute left-0 mt-2 hidden group-hover:block bg-gray-800 rounded shadow-lg">
+            <li><a href="communication.html" class="block px-4 py-2 hover:bg-gray-700">Communication & English</a></li>
+            <li><a href="lv2.html" class="block px-4 py-2 hover:bg-gray-700">LV2 (Sign Language)</a></li>
+          </ul>
+        </li>
+        <li><a href="sustainability.html" class="hover:text-blue-400">Sustainability</a></li>
+        <li><a href="activities.html" class="hover:text-blue-400">Sport & Activities</a></li>
+        <li><a href="career.html" class="hover:text-blue-400">Career Dev</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
-  <!-- À PROPOS -->
-  <section id="about" class="py-16 container mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-6 text-center">À propos</h2>
-    <p class="text-lg text-center max-w-2xl mx-auto">
-      Je m’appelle [Ton prénom]. Je suis passionné par la robotique, les capteurs et le développement Python. 
-      J’aime créer des projets qui lient physique, électronique et informatique pour résoudre des problèmes concrets.
+  <!-- CONTENT -->
+  <section class="container mx-auto px-6 py-16 text-center">
+    <h1 class="text-4xl font-bold mb-6">Bienvenue sur mon e-Portfolio 🎓</h1>
+    <p class="text-lg max-w-2xl mx-auto">
+      Je suis étudiant en L3 3EA à l'ENSEEIHT. Ce portfolio présente mon parcours, mes projets, mes expériences internationales, mes engagements, et mon développement personnel au cours de ces 3 années.
     </p>
   </section>
-
-  <!-- COMPÉTENCES -->
-  <section id="skills" class="bg-gray-100 py-16">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-6 text-center">Compétences</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold mb-3">💻 Programmation</h3>
-          <p>Python (Tkinter, sockets, acquisition), Arduino, Kotlin</p>
-        </div>
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold mb-3">🤖 Robotique</h3>
-          <p>Doosan M0617, Modbus, DRL, capteurs NDVI/PAR</p>
-        </div>
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold mb-3">📊 Data & Mesures</h3>
-          <p>Analyse de signaux, mesures physiques, visualisation</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJETS -->
-  <section id="projects" class="py-16 container mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-6 text-center">Projets</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-6">
-        <h3 class="text-xl font-semibold mb-3">📡 Contrôle de capteurs</h3>
-        <p class="mb-3">Acquisition en temps réel avec Python & Arduino.</p>
-        <a href="https://github.com/username/projet1" class="text-blue-600 hover:underline">Voir le projet</a>
-      </div>
-      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-6">
-        <h3 class="text-xl font-semibold mb-3">🤖 Robot Doosan</h3>
-        <p class="mb-3">Récupération de données de position & force via Modbus.</p>
-        <a href="https://github.com/username/projet2" class="text-blue-600 hover:underline">Voir le projet</a>
-      </div>
-      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-6">
-        <h3 class="text-xl font-semibold mb-3">📱 App Android</h3>
-        <p class="mb-3">Application Kotlin (Tinder de la galerie photos).</p>
-        <a href="https://github.com/username/projet3" class="text-blue-600 hover:underline">Voir le projet</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="bg-gray-900 text-white py-16">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-6">Me contacter</h2>
-      <p class="mb-6">📫 email@example.com</p>
-      <a href="https://linkedin.com/in/..." class="px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700">Mon LinkedIn</a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="bg-gray-800 text-gray-400 py-6 text-center">
-    © 2025 [Ton prénom] - Portfolio hébergé sur GitHub Pages
-  </footer>
 
 </body>
 </html>
