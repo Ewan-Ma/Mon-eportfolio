@@ -240,6 +240,7 @@
     const url = new URL(window.location.href);
     url.searchParams.set('lang', newLang);
     window.location.href = url.toString();
+  }
 
   function toggleLang() {
     const btn = document.getElementById("lang-btn");
