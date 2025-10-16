@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-key="pageTitle">Projets | Ewan Maurel</title>
+  <link rel="icon" type="image/jpg" href="../annexes/photo.jpg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    @keyframes fadeIn { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+    .fade-in { animation:fadeIn 1s ease forwards; opacity:0; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- MENU NAVIGATION -->
+  <nav class="bg-gray-900 text-white px-6 py-4 sticky top-0 z-40 shadow">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold hover:text-blue-400" data-key="menuTitle">ENSEEIHT e-Portfolio</a>
+      <ul class="flex space-x-6">
+        <li class="relative group">
+          <button class="hover:text-blue-400 flex items-center" data-key="menuEngineer">Parcours Ingénieur ▾</button>
+          <ul class="absolute left-0 mt-2 w-44 bg-gray-800 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+            <li><a href="projects.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuProjects">Projets</a></li>
+            <li><a href="#production" class="block px-4 py-2 hover:bg-gray-700" data-key="menuProduction">Production</a></li>
+          </ul>
+        </li>
+        <li class="relative group">
+          <button class="hover:text-blue-400 flex items-center" data-key="menuMobility">Mobilité Internationale ▾</button>
+          <ul class="absolute left-0 mt-2 w-52 bg-gray-800 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+            <li><a href="#communication" class="block px-4 py-2 hover:bg-gray-700" data-key="menuCommunication">Communication & Anglais</a></li>
+            <li><a href="#lv2" class="block px-4 py-2 hover:bg-gray-700" data-key="menuLV2">LV2 (Langue des Signes)</a></li>
+          </ul>
+        </li>
+        <li><a href="#sustainability" class="hover:text-blue-400" data-key="menuSustainability">Développement Durable</a></li>
+        <li><a href="#activities" class="hover:text-blue-400" data-key="menuActivities">Sport & Activités</a></li>
+        <li><a href="#career" class="hover:text-blue-400" data-key="menuCareer">Développement de Carrière</a></li>
+      </ul>
+    </div>
+
+    <!-- BOUTON LANGUE -->
+    <div class="absolute top-4 right-6 z-50">
+      <button id="lang-btn" class="px-3 py-1 bg-gray-200 text-black rounded hover:bg-gray-300" onclick="toggleLang()"><span data-key="EN_FR">EN</span></button>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="bg-gradient-to-r from-blue-700 to-purple-700 text-white py-10 fade-in">
+    <div class="container mx-auto text-center">
+      <h1 class="text-5xl font-bold" data-key="projectsTitle">Mes Projets</h1>
+      <p class="mt-4 text-lg" data-key="projectsSubtitle">Voici quelques projets réalisés durant ma formation</p>
+    </div>
+  </header>
+
+  <!-- CONTENU PROJETS -->
+  <section class="py-16 container mx-auto px-6 fade-in">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2" data-key="project1Title">Projet 1</h3>
+        <p data-key="project1Text">Description du premier projet.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2" data-key="project2Title">Projet 2</h3>
+        <p data-key="project2Text">Description du deuxième projet.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2" data-key="project3Title">Projet 3</h3>
+        <p data-key="project3Text">Description du troisième projet.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="bg-gray-900 text-white py-10 fade-in">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 text-center md:text-left gap-8">
+        <div>
+          <p class="font-semibold text-center mb-2" data-key="footerPhone">Téléphone</p>
+          <p class="font-semibold text-center mb-2"><a href="tel:+33769914159" class="hover:underline">+33 7 69 91 41 59</a></p>
+        </div>
+        <div>
+          <p class="font-semibold text-center mb-2" data-key="footerMail">Email</p>
+          <p class="font-semibold text-center mb-2"><a href="mailto:ewan.maurel@etu.inp-n7.fr" class="hover:underline">ewan.maurel@etu.inp-n7.fr</a></p>
+        </div>
+        <div>
+          <p class="font-semibold text-center mb-2">LinkedIn</p>
+          <p class="font-semibold text-center mb-2"><a href="https://www.linkedin.com/in/ewan-maurel" target="_blank" class="hover:underline">linkedin.com/in/ewan-maurel</a></p>
+        </div>
+      </div>
+      <div class="text-center text-gray-400 text-sm mt-10" data-key="footerCopyright">
+        © 2025 Ewan Maurel - ePortfolio ENSEEIHT
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS TRADUCTION + FADE-IN -->
+  <script>
+  const translations = {
+    fr: {
+      EN_FR: "EN",
+      pageTitle: "Projets | Ewan Maurel",
+      menuTitle: "ENSEEIHT e-Portfolio",
+      menuEngineer: "Parcours Ingénieur ▾",
+      menuProjects: "Projets",
+      menuProduction: "Production",
+      menuMobility: "Mobilité Internationale ▾",
+      menuCommunication: "Communication & Anglais",
+      menuLV2: "LV2 (Langue des Signes)",
+      menuSustainability: "Développement Durable",
+      menuActivities: "Sport & Activités",
+      menuCareer: "Développement de Carrière",
+      projectsTitle: "Mes Projets",
+      projectsSubtitle: "Voici quelques projets réalisés durant ma formation",
+      project1Title: "Projet 1",
+      project1Text: "Description du premier projet.",
+      project2Title: "Projet 2",
+      project2Text: "Description du deuxième projet.",
+      project3Title: "Projet 3",
+      project3Text: "Description du troisième projet.",
+      footerPhone: "Téléphone",
+      footerMail: "Email",
+      footerCopyright: "© 2025 Ewan Maurel - ePortfolio ENSEEIHT"
+    },
+    en: {
+      EN_FR: "FR",
+      pageTitle: "Projects | Ewan Maurel",
+      menuTitle: "ENSEEIHT e-Portfolio",
+      menuEngineer: "Engineering Path ▾",
+      menuProjects: "Projects",
+      menuProduction: "Production",
+      menuMobility: "International Mobility ▾",
+      menuCommunication: "Communication & English",
+      menuLV2: "Second Language (Sign Language)",
+      menuSustainability: "Sustainability",
+      menuActivities: "Sports & Activities",
+      menuCareer: "Career Development",
+      projectsTitle: "My Projects",
+      projectsSubtitle: "Here are some projects done during my studies",
+      project1Title: "Project 1",
+      project1Text: "Description of the first project.",
+      project2Title: "Project 2",
+      project2Text: "Description of the second project.",
+      project3Title: "Project 3",
+      project3Text: "Description of the third project.",
+      footerPhone: "Phone",
+      footerMail: "Email",
+      footerCopyright: "© 2025 Ewan Maurel - ENSEEIHT ePortfolio"
+    }
+  };
+
+  function getLang() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('lang') || localStorage.getItem('lang') || 'fr';
+  }
+
+  function setLang(lang) {
+    localStorage.setItem('lang', lang);
+    document.querySelectorAll("[data-key]").forEach(el=>{
+      const key = el.getAttribute("data-key");
+      if(translations[lang][key]) el.textContent = translations[lang][key];
+    });
+    // Met à jour les liens internes
+    document.querySelectorAll("a[href]").forEach(a=>{
+      const href = a.getAttribute("href");
+      if(href && href.endsWith(".html")){
+        const newUrl = href.includes("?lang=") ? href.replace(/lang=\w+/,"lang="+lang) : href+"?lang="+lang;
+        a.setAttribute("href", newUrl);
+      }
+    });
+  }
+
+  function switchLang(newLang){
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', newLang);
+    window.location.href = url.toString();
+  }
+
+  function toggleLang() {
+    const btn = document.getElementById("lang-btn");
+    if (btn.textContent.trim() === "EN") {
+      switchLang('en');
+    } else {
+      switchLang('fr');
+    }
+  }
+
+  const lang = getLang();
+  setLang(lang);
+
+  // FADE-IN
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = { threshold:0.1, rootMargin:"0px 0px -50px 0px" };
+  const appearOnScroll = new IntersectionObserver((entries, observer)=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting) return;
+      entry.target.style.opacity=1;
+      entry.target.style.transform='translateY(0)';
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+  faders.forEach(fader=>appearOnScroll.observe(fader));
+  </script>
+</body>
+</html>
