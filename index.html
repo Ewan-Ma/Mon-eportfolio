@@ -17,30 +17,40 @@
   <!-- MENU NAVIGATION -->
   <nav class="bg-gray-900 text-white px-6 py-4 sticky top-0 z-40 shadow">
     <div class="container mx-auto flex justify-between items-center">
-      <a href="pages/index.html" class="text-xl font-bold hover:text-blue-400" data-key="menuTitle">ENSEEIHT e-Portfolio</a>
+      <a href="index.html" class="text-xl font-bold hover:text-blue-400" data-key="menuTitle">ENSEEIHT e-Portfolio</a>
       <ul class="flex space-x-6">
 
         <!-- Parcours Ingénieur -->
         <li class="relative group">
           <button class="hover:text-blue-400 flex items-center" data-key="menuEngineer">Parcours Ingénieur ▾</button>
           <ul class="absolute left-0 mt-2 w-44 bg-gray-800 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-            <li><a href="pages/projects.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuProjects">Projets</a></li>
-            <li><a href="pages/production.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuProduction">Production</a></li>
+            <li><a href="pages/n7.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuN7">Cours à l'ENSEEIHT</a></li>
+            <li><a href="pages/projectprod.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuPP">Projets et Productions</a></li>
           </ul>
         </li>
 
-        <!-- Mobilité Internationale -->
+        <li><a href="pages/mobility.html" class="hover:text-blue-400" data-key="menuMobility">Mobilité Internationale</a></li>
+
+        <!-- Engagement -->
         <li class="relative group">
-          <button class="hover:text-blue-400 flex items-center" data-key="menuMobility">Mobilité Internationale ▾</button>
+          <button class="hover:text-blue-400 flex items-center" data-key="menuEngagement">Engagement ▾</button>
           <ul class="absolute left-0 mt-2 w-52 bg-gray-800 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-            <li><a href="pages/communication.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuCommunication">Communication & Anglais</a></li>
-            <li><a href="pages/lv2.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuLV2">LV2 (Langue des Signes)</a></li>
+            <li><a href="pages/civic.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuCivic"></a></li>
+            <li><a href="pages/devdur.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuDev"></a></li>
           </ul>
         </li>
 
-        <li><a href="pages/sustainability.html" class="hover:text-blue-400" data-key="menuSustainability">Développement Durable</a></li>
-        <li><a href="pages/activities.html" class="hover:text-blue-400" data-key="menuActivities">Sport & Activités</a></li>
-        <li><a href="pages/career.html" class="hover:text-blue-400" data-key="menuCareer">Développement de Carrière</a></li>
+        <li><a href="pages/activities.html" class="hover:text-blue-400" data-key="menuActivities"></a></li>
+
+        <!-- Dev de carrière -->
+        <li class="relative group">
+          <button class="hover:text-blue-400 flex items-center" data-key="menuCareer">Développement de Carrière ▾</button>
+          <ul class="absolute left-0 mt-2 w-52 bg-gray-800 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+            <li><a href="pages/internship.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuStage"></a></li>
+            <li><a href="pages/pep.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuPEP"></a></li>
+            <li><a href="pages/job.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuJob"></a></li>
+          </ul>
+        </li>
       </ul>
     </div>
 
@@ -146,14 +156,17 @@
       EN_FR: "EN",
       menuTitle: "ENSEEIHT e-Portfolio",
       menuEngineer: "Parcours Ingénieur ▾",
-      menuProjects: "Projets",
-      menuProduction: "Production",
-      menuMobility: "Mobilité Internationale ▾",
-      menuCommunication: "Communication & Anglais",
-      menuLV2: "LV2 (Langue des Signes)",
-      menuSustainability: "Développement Durable",
-      menuActivities: "Sport & Activités",
-      menuCareer: "Développement de Carrière",
+      menuN7: "Cours à l'ENSEEIHT",
+      menuPP: "Projets et Productions",
+      menuMobility: "Mobilité Internationale",
+      menuEngagement: "Engagement ▾",
+      menuCivic: "Engagement Civique",
+      menuDev: "Développement durable",
+      menuActivities: "Autres Activités",
+      menuCareer: "Développement de Carrière ▾",
+      menuStage: "Stages",
+      menuPEP: "PEP",
+      menuJob: "Jobs d'été",
       name: "Ewan Maurel",
       subtitle: "Diplômé d’un DUT Mesures Physiques et étudiant à l’ENSEEIHT",
       cvButton: "Voir mon CV",
@@ -180,14 +193,17 @@
       EN_FR: "FR",
       menuTitle: "ENSEEIHT e-Portfolio",
       menuEngineer: "Engineering Path ▾",
-      menuProjects: "Projects",
-      menuProduction: "Production",
-      menuMobility: "International Mobility ▾",
-      menuCommunication: "Communication & English",
-      menuLV2: "Second Language (Sign Language)",
-      menuSustainability: "Sustainability",
-      menuActivities: "Sports & Activities",
-      menuCareer: "Career Development",
+      menuN7: "N7 Courses",
+      menuPP: "Projects and Productions",
+      menuMobility: "International Mobility",
+      menuEngagement: "Engagement ▾",
+      menuCivic: "Civic Engagement",
+      menuDev: "Sustainibility",
+      menuActivities: "Other Activities",
+      menuCareer: "Career Development ▾",
+      menuStage: "Internships",
+      menuPEP: "PEP",
+      menuJob: "Summer Jobs",
       name: "Ewan Maurel",
       subtitle: "Graduate of a DUT in Physical Measurements and student at ENSEEIHT",
       cvButton: "View my CV",
