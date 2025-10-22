@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-key="pageTitle">Projets | Ewan Maurel</title>
+  <title data-key="pageTitle"></title>
   <link rel="icon" type="image/jpg" href="../annexes/photo.jpg">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -63,27 +63,57 @@
   <!-- HEADER -->
   <header class="bg-gradient-to-r from-blue-700 to-purple-700 text-white py-10 fade-in">
     <div class="container mx-auto text-center">
-      <h1 class="text-5xl font-bold" data-key="projectsTitle">Mes Projets</h1>
-      <p class="mt-4 text-lg" data-key="projectsSubtitle">Voici quelques projets réalisés durant ma formation</p>
+      <h1 class="text-5xl font-bold" data-key="Title">Mobilité Internationale</h1>
+      <p class="mt-4 text-lg" data-key="Subtitle">Découverte, apprentissage et ouverture au monde</p>
     </div>
   </header>
 
-  <!-- CONTENU PROJETS -->
+  <!-- CONTENU -->
   <section class="py-16 container mx-auto px-6 fade-in">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2" data-key="project1Title">Projet 1</h3>
-        <p data-key="project1Text">Description du premier projet.</p>
+
+    <h2 class="text-4xl font-bold text-center mb-12" data-key="mobTitle">Mes mobilités internationales</h2>
+
+    <!-- Jülich -->
+    <div class="flex flex-col md:flex-row-reverse items-center mb-20">
+      <div class="md:w-1/2">
+        <img src="../annexes/julich.jpg" alt="Forschungszentrum Jülich" class="rounded-2xl shadow-lg w-full">
       </div>
-      <div class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2" data-key="project2Title">Projet 2</h3>
-        <p data-key="project2Text">Description du deuxième projet.</p>
-      </div>
-      <div class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2" data-key="project3Title">Projet 3</h3>
-        <p data-key="project3Text">Description du troisième projet.</p>
+      <div class="md:w-1/2 md:pr-12 mt-8 md:mt-0">
+        <h3 class="text-2xl font-semibold mb-4 text-purple-700" data-key="julichTitle">Stage à Jülich, Allemagne 🇩🇪</h3>
+        <p class="text-lg text-gray-700 leading-relaxed" data-key="julichText">
+          D’avril à juin 2025, j’ai effectué un <strong>stage de 12 semaines</strong> 
+          au <strong>Forschungszentrum Jülich</strong>, au sein de l’institut IBG-3, dans l’équipe 
+          <em>Environmental Measurement Automatization</em>.  
+          <br><br>
+          Mon travail portait sur l’ajout de capteurs de gaz à effet de serre, de rayonnement et de météo 
+          sur un bras robotisé afin de permettre des mesures verticales sous la canopée.  
+          Cette expérience m’a permis de perfectionner mes compétences en 
+          <strong>programmation (Python, sockets, Modbus)</strong> et en 
+          <strong>instrumentation scientifique</strong>, tout en évoluant dans un contexte de recherche 
+          international et interdisciplinaire.
+        </p>
       </div>
     </div>
+
+    <!-- Porto -->
+    <div class="flex flex-col md:flex-row items-center mb-20">
+      <div class="md:w-1/2">
+        <img src="../annexes/porto.jpg" alt="Porto" class="rounded-2xl shadow-lg w-full">
+      </div>
+      <div class="md:w-1/2 md:pl-12 mt-8 md:mt-0">
+        <h3 class="text-2xl font-semibold mb-4 text-blue-700" data-key="portoTitle">Séjour académique à Porto 🇵🇹</h3>
+        <p class="text-lg text-gray-700 leading-relaxed" data-key="portoText">
+          En janvier 2025, j’ai eu l’opportunité de partir à <strong>Porto</strong> au Portugal 
+          dans le cadre d’un programme d’échange universitaire. Cette expérience m’a permis 
+          de renforcer mes compétences linguistiques en anglais et en portugais tout en découvrant 
+          une culture accueillante et dynamique.  
+          <br><br>
+          J’y ai également assisté à des cours d’ingénierie dispensés dans un environnement 
+          international stimulant, favorisant la collaboration et l’ouverture d’esprit.
+        </p>
+      </div>
+    </div>
+
   </section>
 
   <!-- FOOTER -->
@@ -127,17 +157,14 @@
       menuStage: "Stages",
       menuPEP: "PEP",
       menuJob: "Jobs d'été",
-      projectsTitle: "Mes Projets",
-      projectsSubtitle: "Voici quelques projets réalisés durant ma formation",
-      project1Title: "Projet 1",
-      project1Text: "Description du premier projet.",
-      project2Title: "Projet 2",
-      project2Text: "Description du deuxième projet.",
-      project3Title: "Projet 3",
-      project3Text: "Description du troisième projet.",
-      footerPhone: "Téléphone",
-      footerMail: "Email",
-      footerCopyright: "© 2025 Ewan Maurel - ePortfolio ENSEEIHT"
+      pageTitle: "Mobilité Internationale | Ewan Maurel",
+      Title: "Mobilité Internationale",
+      Subtitle: "Découverte, apprentissage et ouverture au monde",
+      mobTitle: "Mes mobilités internationales",
+      portoTitle: "Escapade à Porto 🇵🇹",
+      portoText: "Quelques jours à Porto ont suffi pour tomber sous le charme de cette ville colorée et accueillante. Entre les ruelles pavées, les façades d’azulejos et les couchers de soleil sur le Douro, ce voyage m’a offert une belle parenthèse culturelle et inspirante.",
+      julichTitle: "Stage à Jülich, Allemagne 🇩🇪",
+      julichText: "D’avril à juin 2025, j’ai effectué un stage de 12 semaines au Forschungszentrum Jülich, au sein de l’institut IBG-3, dans l’équipe Environmental Measurement Automatization. Mon travail portait sur l’ajout de capteurs de gaz à effet de serre, de rayonnement et de météo sur un bras robotisé afin de permettre des mesures verticales sous la canopée. Cette expérience m’a permis de perfectionner mes compétences en programmation (Python, sockets, Modbus) et en instrumentation scientifique, tout en évoluant dans un contexte de recherche international.",
     },
     en: {
       EN_FR: "FR",
@@ -154,71 +181,42 @@
       menuStage: "Internships",
       menuPEP: "PEP",
       menuJob: "Summer Jobs",
-      projectsTitle: "My Projects",
-      projectsSubtitle: "Here are some projects done during my studies",
-      project1Title: "Project 1",
-      project1Text: "Description of the first project.",
-      project2Title: "Project 2",
-      project2Text: "Description of the second project.",
-      project3Title: "Project 3",
-      project3Text: "Description of the third project.",
-      footerPhone: "Phone",
-      footerMail: "Email",
-      footerCopyright: "© 2025 Ewan Maurel - ENSEEIHT ePortfolio"
+      pageTitle: "International Mobility | Ewan Maurel",
+      Title: "International Mobility",
+      Subtitle: "Discovery, learning and openness to the world",
+      mobTitle: "My international experiences",
+      portoTitle: "Getaway to Porto 🇵🇹",
+      portoText: "Just a few days in Porto were enough to fall under the spell of this colorful and welcoming city. Between its cobbled streets, tiled facades, and sunsets over the Douro River, this trip offered me a beautiful, inspiring cultural escape.",
+      julichTitle: "Internship in Jülich, Germany 🇩🇪",
+      julichText: "From April to June 2025, I completed a 12-week internship at Forschungszentrum Jülich, within the IBG-3 institute, in the Environmental Measurement Automatization team. My work involved integrating greenhouse gas, radiation, and weather sensors on a robotic arm to enable vertical canopy measurements. This experience allowed me to strengthen my programming (Python, sockets, Modbus) and scientific instrumentation skills while working in an international research environment.",
     }
   };
 
-  function getLang() {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('lang') || localStorage.getItem('lang') || 'fr';
-  }
-
-  function setLang(lang) {
-    localStorage.setItem('lang', lang);
-    document.querySelectorAll("[data-key]").forEach(el=>{
-      const key = el.getAttribute("data-key");
-      if(translations[lang][key]) el.textContent = translations[lang][key];
-    });
-    // Met à jour les liens internes
-    document.querySelectorAll("a[href]").forEach(a=>{
-      const href = a.getAttribute("href");
-      if(href && href.endsWith(".html")){
-        const newUrl = href.includes("?lang=") ? href.replace(/lang=\w+/,"lang="+lang) : href+"?lang="+lang;
-        a.setAttribute("href", newUrl);
-      }
+  const lang = new URLSearchParams(window.location.search).get('lang') || localStorage.getItem('lang') || 'fr';
+  function setLang(lang){
+    localStorage.setItem('lang',lang);
+    document.querySelectorAll('[data-key]').forEach(el=>{
+      const key=el.getAttribute('data-key');
+      if(translations[lang][key]) el.textContent=translations[lang][key];
     });
   }
-
-  function switchLang(newLang){
-    const url = new URL(window.location.href);
-    url.searchParams.set('lang', newLang);
-    window.location.href = url.toString();
+  function toggleLang(){
+    const btn=document.getElementById('lang-btn');
+    const newLang=btn.textContent.trim()==='EN'?'en':'fr';
+    location.search='?lang='+newLang;
   }
-
-  function toggleLang() {
-    const btn = document.getElementById("lang-btn");
-    if (btn.textContent.trim() === "EN") {
-      switchLang('en');
-    } else {
-      switchLang('fr');
-    }
-  }
-
-  const lang = getLang();
   setLang(lang);
 
-  // FADE-IN
-  const faders = document.querySelectorAll('.fade-in');
-  const appearOptions = { threshold:0.1, rootMargin:"0px 0px -50px 0px" };
-  const appearOnScroll = new IntersectionObserver((entries, observer)=>{
+  const faders=document.querySelectorAll('.fade-in');
+  const appearOnScroll=new IntersectionObserver((entries,observer)=>{
     entries.forEach(entry=>{
-      if(!entry.isIntersecting) return;
+      if(!entry.isIntersecting)return;
       entry.target.style.opacity=1;
       entry.target.style.transform='translateY(0)';
       observer.unobserve(entry.target);
     });
-  }, appearOptions);
-  faders.forEach(fader=>appearOnScroll.observe(fader));
+  },{threshold:0.1,rootMargin:"0px 0px -50px 0px"});
+  faders.forEach(f=>appearOnScroll.observe(f));
   </script>
 </body>
 </html>
