@@ -101,16 +101,8 @@
         <img src="../annexes/porto.jpg" alt="Porto" class="rounded-2xl shadow-lg w-full">
       </div>
       <div class="md:w-1/2 md:pl-12 mt-8 md:mt-0">
-        <h3 class="text-2xl font-semibold mb-4 text-blue-700" data-key="portoTitle">Séjour académique à Porto 🇵🇹</h3>
-        <p class="text-lg text-gray-700 leading-relaxed" data-key="portoText">
-          En janvier 2025, j’ai eu l’opportunité de partir à <strong>Porto</strong> au Portugal 
-          dans le cadre d’un programme d’échange universitaire. Cette expérience m’a permis 
-          de renforcer mes compétences linguistiques en anglais et en portugais tout en découvrant 
-          une culture accueillante et dynamique.  
-          <br><br>
-          J’y ai également assisté à des cours d’ingénierie dispensés dans un environnement 
-          international stimulant, favorisant la collaboration et l’ouverture d’esprit.
-        </p>
+        <h3 class="text-2xl font-semibold mb-4 text-blue-700" data-key="portoTitle"></h3>
+        <p class="text-lg text-gray-700 leading-relaxed" data-key="portoText"></p>
       </div>
     </div>
 
@@ -162,9 +154,9 @@
       Subtitle: "Découverte, apprentissage et ouverture au monde",
       mobTitle: "Mes mobilités internationales",
       portoTitle: "Escapade à Porto 🇵🇹",
-      portoText: "Quelques jours à Porto ont suffi pour tomber sous le charme de cette ville colorée et accueillante. Entre les ruelles pavées, les façades d’azulejos et les couchers de soleil sur le Douro, ce voyage m’a offert une belle parenthèse culturelle et inspirante.",
+      portoText: "Quelques jours à <strong>Porto</strong> ont suffi pour tomber sous le charme de cette ville colorée et accueillante. Entre les ruelles pavées, les façades d’azulejos et les couchers de soleil sur le Douro, ce voyage m’a offert une belle parenthèse culturelle et inspirante.",
       julichTitle: "Stage à Jülich, Allemagne 🇩🇪",
-      julichText: "D’avril à juin 2025, j’ai effectué un stage de 12 semaines au Forschungszentrum Jülich, au sein de l’institut IBG-3, dans l’équipe Environmental Measurement Automatization. Mon travail portait sur l’ajout de capteurs de gaz à effet de serre, de rayonnement et de météo sur un bras robotisé afin de permettre des mesures verticales sous la canopée. Cette expérience m’a permis de perfectionner mes compétences en programmation (Python, sockets, Modbus) et en instrumentation scientifique, tout en évoluant dans un contexte de recherche international.",
+      julichText: "D’avril à juin 2025, j’ai effectué un <strong>stage de 12 semaines</strong> au <strong><a href='https://www.fz-juelich.de/de' target='_blank' class='text-noir-600 hover:underline'>Forschungszentrum Jülich</a></strong>, au sein de l’institut IBG-3, dans l’équipe <em>Environmental Measurement Automatization</em>.<br><br> Mon travail portait sur l’ajout de capteurs de gaz à effet de serre, de rayonnement et de météo sur un bras robotisé afin de permettre des mesures verticales sous la canopée. Cette expérience m’a permis de perfectionner mes compétences en <strong>programmation (Python, sockets, Modbus)</strong> et en <strong>instrumentation scientifique</strong>, tout en évoluant dans un contexte de recherche international et interdisciplinaire.",
     },
     en: {
       EN_FR: "FR",
@@ -186,9 +178,9 @@
       Subtitle: "Discovery, learning and openness to the world",
       mobTitle: "My international experiences",
       portoTitle: "Getaway to Porto 🇵🇹",
-      portoText: "Just a few days in Porto were enough to fall under the spell of this colorful and welcoming city. Between its cobbled streets, tiled facades, and sunsets over the Douro River, this trip offered me a beautiful, inspiring cultural escape.",
+      portoText: "Just a few days in <strong>Porto</strong> were enough to fall under the spell of this colorful and welcoming city. Between its cobbled streets, tiled facades, and sunsets over the Douro River, this trip offered me a beautiful, inspiring cultural escape.",
       julichTitle: "Internship in Jülich, Germany 🇩🇪",
-      julichText: "From April to June 2025, I completed a 12-week internship at Forschungszentrum Jülich, within the IBG-3 institute, in the Environmental Measurement Automatization team. My work involved integrating greenhouse gas, radiation, and weather sensors on a robotic arm to enable vertical canopy measurements. This experience allowed me to strengthen my programming (Python, sockets, Modbus) and scientific instrumentation skills while working in an international research environment.",
+      julichText: "From April to June 2025, I completed a <strong>12-week internship</strong> at the <strong><a href='https://www.fz-juelich.de/de' target='_blank' class='text-noir-600 hover:underline'>Forschungszentrum Jülich</a></strong>, within the IBG-3 institute, in the <em>Environmental Measurement Automatization</em> team.<br><br>My work focused on integrating greenhouse gas, radiation, and weather sensors onto a robotic arm to enable vertical measurements under the canopy. This experience allowed me to strengthen my skills in <strong>programming (Python, sockets, Modbus)</strong> and <strong>scientific instrumentation</strong>, while working in an international and interdisciplinary research environment.",
     }
   };
 
@@ -197,7 +189,7 @@
     localStorage.setItem('lang',lang);
     document.querySelectorAll('[data-key]').forEach(el=>{
       const key=el.getAttribute('data-key');
-      if(translations[lang][key]) el.textContent=translations[lang][key];
+      if(translations[lang][key]) el.innerHTML=translations[lang][key];
     });
   }
   function toggleLang(){

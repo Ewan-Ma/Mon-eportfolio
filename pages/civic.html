@@ -70,7 +70,51 @@
 
   <!-- CONTENU -->
   <section class="py-16 container mx-auto px-6 fade-in">
-    
+
+    <h2 class="text-4xl font-bold text-center mb-12" data-key="civicTitle">Mes engagements personnels</h2>
+
+    <!-- 4L TROPHY -->
+    <div class="flex flex-col md:flex-row items-center mb-20">
+      <!-- CARROUSEL 4L TROPHY -->
+      <div class="md:w-1/2 relative rounded-2xl overflow-hidden shadow-lg">
+        <div id="carousel-4l" class="relative w-full h-72 md:h-96 overflow-hidden rounded-2xl">
+          <img src="../annexes/4l1.png" alt="4L Trophy 1" class="w-full h-full object-cover absolute inset-0 opacity-100 transition-opacity duration-1000">
+          <img src="../annexes/4l2.jpg" alt="4L Trophy 2" class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="../annexes/4l3.jpg" alt="4L Trophy 3" class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-1000">
+        </div>
+
+        <!-- BOUTONS -->
+        <button id="prev-4l" class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/70">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="next-4l" class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/70">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- PETITS POINTS -->
+        <div id="dots-4l" class="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          <span class="dot w-3 h-3 bg-white/50 rounded-full cursor-pointer transition-all duration-300"></span>
+          <span class="dot w-3 h-3 bg-white/50 rounded-full cursor-pointer transition-all duration-300"></span>
+          <span class="dot w-3 h-3 bg-white/50 rounded-full cursor-pointer transition-all duration-300"></span>
+        </div>
+      </div>
+      <div class="md:w-1/2 md:pl-12 mt-8 md:mt-0">
+        <h3 class="text-2xl font-semibold mb-4 text-rose-600" data-key="trophyTitle"></h3>
+        <p class="text-lg text-gray-700 leading-relaxed" data-key="trophyText"></p>
+      </div>
+    </div>
+
+    <!-- SEIN'GULIERE -->
+    <div class="flex flex-col md:flex-row-reverse items-center mb-20">
+      <div class="md:w-1/2">
+        <img src="../annexes/seinguliere.jpg" alt="Sein'gulière Bessières" class="rounded-2xl shadow-lg w-full">
+      </div>
+      <div class="md:w-1/2 md:pr-12 mt-8 md:mt-0">
+        <h3 class="text-2xl font-semibold mb-4 text-pink-700" data-key="seinTitle"></h3>
+        <p class="text-lg text-gray-700 leading-relaxed" data-key="seinText"></p>
+      </div>
+    </div>
+
   </section>
 
   <!-- FOOTER -->
@@ -114,9 +158,14 @@
       menuStage: "Stages",
       menuPEP: "PEP",
       menuJob: "Jobs d'été",
-      pageTitle: "Titre | Ewan Maurel",
-      Title: "Titre",
-      Subtitle: "Soustitre",
+      pageTitle: "Engagement Civique | Ewan Maurel",
+      Title: "Engagement Civique",
+      Subtitle: "Solidarité, sport et humanité au cœur de mes actions",
+      civicTitle: "Mes engagements personnels",
+      trophyTitle: "Préparation du 4L Trophy 2027",
+      trophyText: "Avec mon association <a href='https://association-4l-jumelles.s2.yapla.com/fr/accueil' target='_blank' class='text-noir-600 hover:underline'><strong>4L Jumelles</strong></a>, je me prépare activement à participer au <strong>4L Trophy 2027</strong>, un raid humanitaire étudiant reliant la France au Maroc en <strong>Renault 4L</strong>.<br><br>Ce projet a une double dimension : sportive et solidaire. En plus du défi de traverser le désert marocain, l’objectif principal est de venir en aide aux populations locales en livrant du matériel scolaire et des denrées non périssables.  <br><br>Notre équipage participe également à des <strong>actions caritatives en France</strong> afin de collecter des fonds et soutenir la <strong>Croix-Rouge française</strong>. Cette aventure symbolise pour moi la <em>solidarité, la persévérance et l’esprit d’équipe</em>.  <br><br>L’aventure est à suivre sur les réseaux : <a href='https://www.instagram.com/4l_jumelles' target='_blank' class='text-rose-600 hover:underline'>@4L_jumelles</a>",
+      seinTitle: "Participation à la Sein’gulière 2025 🎗️",
+      seinText: "En octobre 2025, j’ai pris part à la <a href='https://www.bessieres.fr/octobre-rose-1-la-seinguliere-page' target='_blank' class='text-noir-600 hover:underline'><strong>Sein’gulière</strong> à Bessières (31660)</a>, une course caritative organisée dans le cadre d’<a href='https://fr.wikipedia.org/wiki/Octobre_rose' target='_blank' class='text-noir-600 hover:underline'><strong>Octobre Rose</strong></a>, au profit de la recherche contre le cancer du sein.  <br><br>J’ai participé à la course de <strong>10 km</strong> et terminé à la <strong>27ᵉ place</strong> en un peu moins de <strong>45 minutes</strong>.  <br><br>Cet événement m’a permis d’allier ma passion pour le sport à une cause profondément humaine et solidaire. Il représente pour moi une façon concrète de soutenir la recherche médicale tout en partageant un moment collectif fort et porteur d’espoir.",
       footerPhone: "Téléphone",
       footerMail: "Email",
       footerCopyright: "© 2025 Ewan Maurel - ePortfolio ENSEEIHT"
@@ -136,9 +185,14 @@
       menuStage: "Internships",
       menuPEP: "PEP",
       menuJob: "Summer Jobs",
-      pageTitle: "Title | Ewan Maurel",
-      Title: "Title",
-      Subtitle: "Subtitle",
+      pageTitle: "Civic Engagement | Ewan Maurel",
+      Title: "Civic Engagement",
+      Subtitle: "Solidarity, sport and humanity at the heart of my actions",
+      civicTitle: "My civic involvement",
+      trophyTitle: "Preparing for the 2027 4L Trophy",
+      trophyText: "With my association <a href='https://association-4l-jumelles.s2.yapla.com/fr/accueil' target='_blank' class='text-noir-600 hover:underline'><strong>4L Jumelles</strong></a>, I am actively preparing to take part in the <strong>4L Trophy 2027</strong>, a student humanitarian rally connecting France to Morocco in a <strong>Renault 4L</strong>.<br><br>This project has a dual purpose: both sporting and humanitarian. In addition to the challenge of crossing the Moroccan desert, the main goal is to help local populations by delivering school supplies and non-perishable food.<br><br>Our team also takes part in <strong>charitable actions in France</strong> to raise funds and support the <strong>French Red Cross</strong>. This adventure represents for me <em>solidarity, perseverance, and team spirit</em>.<br><br>Follow our journey on social media: <a href='https://www.instagram.com/4l_jumelles' target='_blank' class='text-rose-600 hover:underline'>@4L_jumelles</a>",
+      seinTitle: "Participation in the Sein’gulière 2025 🎗️",
+      seinText: "In October 2025, I took part in the <a href='https://www.bessieres.fr/octobre-rose-1-la-seinguliere-page' target='_blank' class='text-noir-600 hover:underline'><strong>Sein’gulière</strong> in Bessières (31660)</a>, a charity race organized as part of <a href='https://fr.wikipedia.org/wiki/Octobre_rose' target='_blank' class='text-noir-600 hover:underline'><strong>Pink October</strong></a>, in support of breast cancer research.<br><br>I participated in the <strong>10 km race</strong> and finished in <strong>27th place</strong> in just under <strong>45 minutes</strong>.<br><br>This event allowed me to combine my passion for sports with a deeply human and humanitarian cause. For me, it represents a tangible way to support medical research while sharing a meaningful collective moment filled with hope.",
       footerPhone: "Phone",
       footerMail: "Email",
       footerCopyright: "© 2025 Ewan Maurel - ENSEEIHT ePortfolio"
@@ -154,7 +208,7 @@
     localStorage.setItem('lang', lang);
     document.querySelectorAll("[data-key]").forEach(el=>{
       const key = el.getAttribute("data-key");
-      if(translations[lang][key]) el.textContent = translations[lang][key];
+      if(translations[lang][key]) el.innerHTML = translations[lang][key];
     });
     // Met à jour les liens internes
     document.querySelectorAll("a[href]").forEach(a=>{
@@ -196,6 +250,54 @@
     });
   }, appearOptions);
   faders.forEach(fader=>appearOnScroll.observe(fader));
+
+  // --- CARROUSEL 4L TROPHY ---
+  const images4L = document.querySelectorAll("#carousel-4l img");
+  const dots4L = document.querySelectorAll("#dots-4l .dot");
+  let current4L = 0;
+  const total4L = images4L.length;
+  const intervalTime = 10000;
+
+  function showImage4L(index) {
+    images4L.forEach((img, i) => {
+      img.style.opacity = i === index ? "1" : "0";
+    });
+    dots4L.forEach((dot, i) => {
+      dot.classList.toggle("bg-white", i === index);
+      dot.classList.toggle("bg-white/50", i !== index);
+      dot.classList.toggle("w-4", i === index);
+      dot.classList.toggle("h-4", i === index);
+    });
+  }
+
+  // Navigation flèches
+  document.getElementById("prev-4l").addEventListener("click", () => {
+    current4L = (current4L - 1 + total4L) % total4L;
+    showImage4L(current4L);
+  });
+
+  document.getElementById("next-4l").addEventListener("click", () => {
+    current4L = (current4L + 1) % total4L;
+    showImage4L(current4L);
+  });
+
+  // Navigation via clic sur les points
+  dots4L.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      current4L = i;
+      showImage4L(current4L);
+    });
+  });
+
+  // Défilement automatique
+  setInterval(() => {
+    current4L = (current4L + 1) % total4L;
+    showImage4L(current4L);
+  }, intervalTime);
+
+  // Initialisation
+  showImage4L(current4L);
+
   </script>
 </body>
 </html>
