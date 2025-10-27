@@ -122,6 +122,10 @@
           <h3 class="text-xl font-semibold mb-3">🌍 <span data-key="skillLangTitle">Langues</span></h3>
           <p data-key="skillLangText">Anglais (B2), Espagnol (A2+), LSF (initiation)</p>
         </div>
+        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">🤔 <span data-key="skillCurieuxTitle">Curiosité</span></h3>
+          <p data-key="skillCurieuxText">Ouverture d'esprit (Cours d'électronique, Projet du 4L Trophy, Programmation, Sport, Intérim...)</p>
+        </div>
       </div>
     </div>
   </section>
@@ -172,19 +176,21 @@
       cvButton: "Voir mon CV",
       contactButton: "Me contacter",
       aboutTitle: "À propos de moi",
-      aboutText: "Je suis Ewan. Après avoir étudié à l’Institut Universitaire de Technologie de Toulouse pendant deux ans, je suis maintenant étudiant à l’ENSEEIHT, une école d’ingénieurs de haut niveau également basée à Toulouse. Passionné de sciences et de nouvelles technologies, je suis le parcours Génie Électrique dans le but de travailler en électronique.",
+      aboutText: "Je m'appelle Ewan. Après avoir étudié à l’Institut Universitaire de Technologie de Toulouse pendant deux ans, je suis maintenant étudiant à l’ENSEEIHT, une école d’ingénieurs de haut niveau également basée à Toulouse. Passionné d'électronique et de nouvelles technologies, je suis le parcours Electroniqe, Energie Electrique, Automatique dans le but de travailler en dans ces domaines.",
       videoTitle: "Vidéo",
       skillsTitle: "Compétences",
       skillProgTitle: "Programmation",
-      skillProgText: "Python, C",
+      skillProgText: "Python, java (Android Studio), C++ (Arduino), C, html...)",
       skillOfficeTitle: "Bureautique",
-      skillOfficeText: "Outils de bureautique, travail collaboratif",
+      skillOfficeText: "Outils de bureautique (Excel, LaTeX, Word, Canva, LibreOffice...)",
       skillTeamTitle: "Travail en équipe",
-      skillTeamText: "Encadrement associatif, gestion de projets collectifs",
+      skillTeamText: "Encadrement associatif, Gestion de projets collectifs",
       skill3DTitle: "Modélisation 3D",
-      skill3DText: "Initiation à la conception et au prototypage 3D",
+      skill3DText: "Initiation à la conception et au prototypage 3D (Fusion, Onshape...)",
       skillLangTitle: "Langues",
-      skillLangText: "Anglais (B2), Espagnol (A2+), LSF (initiation)",
+      skillLangText: "Français (natif), Anglais (B2), Espagnol (A2+), Langue des Signes Française (initiation)",
+      skillCurieuxTitle: "Curiosité",
+      skillCurieuxText: "Diversifié (Ecole d'électronique, Projet du 4L Trophy, Programmation, Sports...)",
       footerPhone: "Téléphone",
       footerMail: "Email",
       footerCopyright: "© 2025 Ewan Maurel - ePortfolio ENSEEIHT"
@@ -209,19 +215,21 @@
       cvButton: "View my CV",
       contactButton: "Contact me",
       aboutTitle: "About Me",
-      aboutText: "I'm Ewan. After studying at the University Institute of Technology in Toulouse for two years, I am now a student at ENSEEIHT, a top-level engineering school also located in Toulouse. Passionate about science and new technologies, I am pursuing the Electrical Engineering program to work in electronics.",
+      aboutText: "I’m Ewan. After studying for two years at the University Institute of Technology of Toulouse, I am now a student at ENSEEIHT, a top-level engineering school also located in Toulouse. Passionate about electronics and new technologies, I am following the Electronics, Electrical Energy, and Automation track with the goal of working in these fields.",
       videoTitle: "Video",
       skillsTitle: "Skills",
       skillProgTitle: "Programming",
-      skillProgText: "Python, C",
+      skillProgText: "Python, java (Android Studio), C++ (Arduino), C, html...)",
       skillOfficeTitle: "Office Tools",
-      skillOfficeText: "Office software, collaborative work",
+      skillOfficeText: "Office software (Excel, LaTeX, Word, Canva, LibreOffice...)",
       skillTeamTitle: "Teamwork",
-      skillTeamText: "Association management, collective project coordination",
+      skillTeamText: "Association management, Collective project coordination",
       skill3DTitle: "3D Modeling",
-      skill3DText: "Introduction to design and 3D prototyping",
+      skill3DText: "Introduction to design and 3D prototyping (Fusion, Onshape...)",
       skillLangTitle: "Languages",
-      skillLangText: "English (B2), Spanish (A2+), French Sign Language (beginner)",
+      skillLangText: "French (native), English (B2), Spanish (A2+), French Sign Language (beginner)",
+      skillCurieuxTitle: "Curiosity",
+      skillCurieuxText: "Openness (Engineering school in electronics, 4L Trophy project, Programming, Sports...)",
       footerPhone: "Phone",
       footerMail: "Email",
       footerCopyright: "© 2025 Ewan Maurel - ENSEEIHT ePortfolio"
@@ -237,7 +245,7 @@
     localStorage.setItem('lang', lang);
     document.querySelectorAll("[data-key]").forEach(el => {
       const key = el.getAttribute("data-key");
-      if (translations[lang][key]) el.textContent = translations[lang][key];
+      if (translations[lang][key]) el.innerHTML = translations[lang][key];
     });
 
     const cvLink = document.getElementById("cv-link");

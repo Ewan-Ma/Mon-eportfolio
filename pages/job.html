@@ -68,9 +68,46 @@
     </div>
   </header>
 
-  <!-- CONTENU -->
+  <!-- CONTENT -->
   <section class="py-16 container mx-auto px-6 fade-in">
-    
+    <div class="grid md:grid-cols-2 gap-10 mb-16 items-center">
+      <div>
+        <h2 class="text-3xl font-bold mb-4"><i class="fas fa-boxes mr-2 text-blue-600"></i><span data-key="tempHeading">Missions d’intérim</span></h2>
+        <p class="text-lg leading-relaxed mb-4" data-key="tempText1">
+          Durant plusieurs périodes estivales, j’ai travaillé via des agences d’intérim sur des postes variés : mise sous pli, installation de barnums, manutention, magasinier et cariste (conduite de chariots élévateurs).
+        </p>
+        <p class="text-lg leading-relaxed" data-key="tempText2">
+          Ces missions m’ont permis de développer l’organisation, la rigueur et une grande capacité d’adaptation à des équipes et environnements différents.
+        </p>
+      </div>
+      <img src="../annexes/job1.jpg" alt="Travail d'intérim" class="rounded-2xl shadow-lg">
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-10 mb-16 items-center">
+      <img src="../annexes/job2.jpg" alt="Travaux bâtiment" class="rounded-2xl shadow-lg md:order-1 order-2">
+      <div class="md:order-2 order-1">
+        <h2 class="text-3xl font-bold mb-4"><i class="fas fa-hammer mr-2 text-blue-600"></i><span data-key="buildHeading">Travaux & bâtiment</span></h2>
+        <p class="text-lg leading-relaxed mb-4" data-key="buildText1">
+          J’ai travaillé sur des chantiers de bâtiment : pose de placo, carrelage, faïence, menuiserie, et maçonnerie.
+        </p>
+        <p class="text-lg leading-relaxed" data-key="buildText2">
+          Ces expériences m’ont appris la précision, la coordination d’équipe et la gestion du temps sur des tâches manuelles exigeantes.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-3xl font-bold mb-4"><i class="fas fa-cogs mr-2 text-blue-600"></i><span data-key="mechHeading">Mécanique</span></h2>
+        <p class="text-lg leading-relaxed mb-4" data-key="mechText1">
+          Passionné par la mécanique, j’ai acquis de l’expérience en entretien et réparation automobile, moto et matériel agricole.
+        </p>
+        <p class="text-lg leading-relaxed" data-key="mechText2">
+          Ces missions m’ont renforcé dans le diagnostic, la réparation et la logique appliquée au dépannage mécanique.
+        </p>
+      </div>
+      <img src="../annexes/job3.jpg" alt="Mécanique automobile et agricole" class="rounded-2xl shadow-lg">
+    </div>
   </section>
 
   <!-- FOOTER -->
@@ -114,9 +151,18 @@
       menuStage: "Stages",
       menuPEP: "PEP",
       menuJob: "Jobs d'été",
-      pageTitle: "Titre | Ewan Maurel",
-      Title: "Titre",
-      Subtitle: "Soustitre",
+      pageTitle: "Jobs d’été | Ewan Maurel",
+      Title: "Jobs d’été & expériences professionnelles",
+      Subtitle: "Polyvalence, adaptation et apprentissage sur le terrain",
+      tempHeading: "Missions d’intérim",
+      tempText1: "Durant plusieurs périodes estivales, j’ai travaillé via des agences d’intérim sur des postes variés : mise sous pli, installation de barnums, manutention, magasinier et cariste (conduite de chariots élévateurs).",
+      tempText2: "Ces missions m’ont permis de développer l'organisation, la rigueur et une grande capacité d’adaptation à des équipes et environnements différents.",
+      buildHeading: "Travaux & bâtiment",
+      buildText1: "J’ai travaillé sur des chantiers de bâtiment : pose de placo, carrelage, faïence, menuiserie, et maçonnerie.",
+      buildText2: "Ces expériences m’ont appris la précision, la coordination d’équipe et la gestion du temps sur des tâches manuelles exigeantes.",
+      mechHeading: "Mécanique",
+      mechText1: "Passionné par la mécanique, j’ai acquis de l’expérience en entretien et réparation automobile, moto et matériel agricole.",
+      mechText2: "Ces missions m’ont renforcé dans le diagnostic, la réparation et la logique appliquée au dépannage mécanique.",
       footerPhone: "Téléphone",
       footerMail: "Email",
       footerCopyright: "© 2025 Ewan Maurel - ePortfolio ENSEEIHT"
@@ -136,9 +182,18 @@
       menuStage: "Internships",
       menuPEP: "PEP",
       menuJob: "Summer Jobs",
-      pageTitle: "Title | Ewan Maurel",
-      Title: "Title",
-      Subtitle: "Subtitle",
+      pageTitle: "Summer Jobs | Ewan Maurel",
+      Title: "Summer Jobs & Work Experience",
+      Subtitle: "Versatility, adaptability and hands-on learning",
+      tempHeading: "Temp work assignments",
+      tempText1: "During several summer periods I worked through temp agencies on varied positions: envelope stuffing, marquee/barnum installation, manual handling, warehouse work and forklift operator (cariste).",
+      tempText2: "These assignments helped me build organization, rigor and a strong ability to adapt to different teams and environments.",
+      buildHeading: "Construction & building work",
+      buildText1: "I worked on construction jobs: drywall (placo), tiling, faience, carpentry and masonry.",
+      buildText2: "These tasks taught me manual precision, team coordination and time management on hands-on work.",
+      mechHeading: "Mechanics",
+      mechText1: "Passionate about mechanics, I gained experience in maintenance and repair of cars, motorcycles and agricultural machinery.",
+      mechText2: "These roles strengthened my diagnostic skills, repair logic and practical troubleshooting.",
       footerPhone: "Phone",
       footerMail: "Email",
       footerCopyright: "© 2025 Ewan Maurel - ENSEEIHT ePortfolio"
@@ -154,7 +209,7 @@
     localStorage.setItem('lang', lang);
     document.querySelectorAll("[data-key]").forEach(el=>{
       const key = el.getAttribute("data-key");
-      if(translations[lang][key]) el.textContent = translations[lang][key];
+      if(translations[lang][key]) el.innerHTML = translations[lang][key];
     });
     // Met à jour les liens internes
     document.querySelectorAll("a[href]").forEach(a=>{

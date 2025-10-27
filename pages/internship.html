@@ -70,7 +70,44 @@
 
   <!-- CONTENU -->
   <section class="py-16 container mx-auto px-6 fade-in">
-    
+    <!-- Bloc 1 -->
+    <div class="grid md:grid-cols-2 gap-10 items-center mb-20">
+      <img src="../annexes/montage.jpg" alt="Montage bras robotisé" class="rounded-2xl shadow-lg">
+      <div>
+        <h2 class="text-3xl font-bold mb-4" data-key="introTitle">Présentation du stage</h2>
+        <p class="text-lg mb-3" data-key="intro1"></p>
+        <p class="text-lg mb-3" data-key="intro2"></p>
+        <p class="text-lg" data-key="intro3"></p>
+      </div>
+    </div>
+
+    <!-- Bloc 2 -->
+    <div class="mb-20 fade-in">
+      <h2 class="text-3xl font-bold mb-6 text-center" data-key="missionTitle">Missions et travaux réalisés</h2>
+      <div class="max-w-4xl mx-auto text-lg leading-relaxed">
+        <p class="mb-4" data-key="mission1"></p>
+        <p class="mb-4" data-key="mission2"></p>
+        <p class="mb-4" data-key="mission3"></p>
+        <p data-key="mission4"></p>
+      </div>
+    </div>
+
+    <!-- Bloc 3 -->
+    <div class="bg-gray-100 rounded-2xl p-10 shadow-inner fade-in">
+      <h2 class="text-3xl font-bold mb-6 text-center" data-key="bilanTitle">Bilan et compétences acquises</h2>
+      <div class="max-w-4xl mx-auto text-lg leading-relaxed text-center">
+        <p class="mb-4" data-key="bilan1"></p>
+        <p data-key="bilan2"></p>
+      </div>
+    </div>
+
+    <!-- PDF -->
+    <div class="text-center mt-12 fade-in">
+      <a href="../annexes/RAPPORT_DE_STAGE_MAUREL.pdf" target="_blank"
+         class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white text-lg rounded-lg shadow hover:bg-blue-700 transition">
+        <i class="fas fa-file-pdf"></i> <span data-key="pdfBtn">Télécharger le rapport de stage (PDF)</span>
+      </a>
+    </div>
   </section>
 
   <!-- FOOTER -->
@@ -114,9 +151,22 @@
       menuStage: "Stages",
       menuPEP: "PEP",
       menuJob: "Jobs d'été",
-      pageTitle: "Titre | Ewan Maurel",
-      Title: "Titre",
-      Subtitle: "Soustitre",
+      pageTitle: "Stage | Ewan Maurel",
+      Title: "Stage au Forschungszentrum Jülich",
+      Subtitle: "Projet de recherche sur la robotisation des mesures environnementales",
+      introTitle: "Présentation du stage",
+      intro1: "Mon stage de 12 semaines s’est déroulé au sein du Forschungszentrum Jülich en Allemagne, dans l’institut IBG-3 Agrosphere. J’ai intégré l’équipe Environmental Measurement Automatization sous la supervision du Dr. Alexander Graf.",
+      intro2: "L’objectif principal du stage était d’ajouter de nouveaux capteurs de gaz à effet de serre, de rayonnement et de météo sur un bras robotisé afin de permettre la réalisation de profils verticaux sous la canopée.",
+      intro3: "Ce travail s’inscrit dans une démarche de recherche visant à mieux comprendre les échanges de CO₂, de vapeur d’eau et d’énergie entre la végétation et l’atmosphère.",
+      missionTitle: "Missions et travaux réalisés",
+      mission1: "J’ai participé à l’intégration de plusieurs capteurs (gaz à effet de serre, PAR, NDVI, météo) dans le système robotisé, en assurant leur communication et leur synchronisation avec le bras.",
+      mission2: "J’ai développé une interface Python permettant de sélectionner les capteurs, définir la fréquence d’acquisition et contrôler les modes de mesure.",
+      mission3: "Une autre partie du travail a consisté à récupérer les données en temps réel de position et de force du bras robotisé via le protocole Modbus TCP, pour analyse et enregistrement sur PC.",
+      mission4: "Enfin, j’ai pris part à des missions de maintenance sur les stations de mesure et à des campagnes de terrain axées sur la biométrie végétale.",
+      bilanTitle: "Bilan et compétences acquises",
+      bilan1: "Ce stage m’a permis d’approfondir mes compétences en programmation Python, en communication réseau (sockets, Modbus), et en automatisation de mesures expérimentales.",
+      bilan2: "J’ai également développé mon autonomie, ma rigueur scientifique et ma capacité à travailler dans un environnement international.",
+      pdfBtn: "Télécharger le rapport de stage (PDF)",
       footerPhone: "Téléphone",
       footerMail: "Email",
       footerCopyright: "© 2025 Ewan Maurel - ePortfolio ENSEEIHT"
@@ -136,9 +186,22 @@
       menuStage: "Internships",
       menuPEP: "PEP",
       menuJob: "Summer Jobs",
-      pageTitle: "Title | Ewan Maurel",
-      Title: "Title",
-      Subtitle: "Subtitle",
+      pageTitle: "Internship | Ewan Maurel",
+      Title: "Internship at Forschungszentrum Jülich",
+      Subtitle: "Research project on robotic environmental measurement automation",
+      introTitle: "Internship Overview",
+      intro1: "My 12-week internship took place at the Forschungszentrum Jülich in Germany, within the IBG-3 Agrosphere institute. I joined the Environmental Measurement Automatization team under the supervision of Dr. Alexander Graf.",
+      intro2: "The main objective was to integrate new greenhouse gas, radiation, and weather sensors onto a robotic arm to perform vertical profile measurements under the canopy.",
+      intro3: "This project contributes to the study of CO₂, water vapor, and energy exchanges between vegetation and the atmosphere.",
+      missionTitle: "Tasks and Achievements",
+      mission1: "I contributed to integrating multiple sensors (greenhouse gases, PAR, NDVI, weather) into the robotic system while ensuring their communication and synchronization.",
+      mission2: "I developed a Python interface that allows users to select sensors, configure measurement frequency, and control acquisition modes.",
+      mission3: "Another key task was the real-time retrieval of robotic arm data (position and force) via the Modbus TCP protocol for visualization and recording on PC.",
+      mission4: "I also took part in the maintenance of measurement stations and field campaigns related to vegetation biometrics.",
+      bilanTitle: "Conclusion and Skills Acquired",
+      bilan1: "This internship strengthened my skills in Python programming, network communication (sockets, Modbus), and experimental measurement automation.",
+      bilan2: "It also enhanced my autonomy, scientific rigor, and ability to collaborate in an international research environment.",
+      pdfBtn: "Download internship report (PDF)",
       footerPhone: "Phone",
       footerMail: "Email",
       footerCopyright: "© 2025 Ewan Maurel - ENSEEIHT ePortfolio"
@@ -154,7 +217,7 @@
     localStorage.setItem('lang', lang);
     document.querySelectorAll("[data-key]").forEach(el=>{
       const key = el.getAttribute("data-key");
-      if(translations[lang][key]) el.textContent = translations[lang][key];
+      if(translations[lang][key]) el.innerHTML = translations[lang][key];
     });
     // Met à jour les liens internes
     document.querySelectorAll("a[href]").forEach(a=>{

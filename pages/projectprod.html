@@ -70,7 +70,41 @@
 
   <!-- CONTENU -->
   <section class="py-16 container mx-auto px-6 fade-in">
-    
+    <h2 class="text-4xl font-bold text-center mb-12" data-key="mainTitle">Projets en cours</h2>
+
+    <!-- Projet Monoplace -->
+    <div class="flex flex-col md:flex-row items-center mb-20">
+      <div class="md:w-1/2">
+        <img src="../annexes/n7racing_monoplace.jpg" alt="N7 Racing Team - Monoplace" class="rounded-2xl shadow-lg w-full">
+      </div>
+      <div class="md:w-1/2 md:pl-12 mt-8 md:mt-0">
+        <h3 class="text-2xl font-semibold mb-4 text-blue-700" data-key="monoTitle">Projet Monoplace – N7 Racing Team 🏎️</h3>
+        <p class="text-lg text-gray-700 leading-relaxed" data-key="monoText">
+          Je fais partie du <strong>pôle châssis</strong> de la <strong>N7 Racing Team</strong>, l’équipe de conception automobile de l’ENSEEIHT.  
+          Notre objectif est ambitieux : <strong>concevoir et fabriquer une monoplace</strong> afin de participer à une compétition entre écoles d’ingénieurs en <strong>2027</strong>.  
+          <br><br>
+          Mon rôle se concentre sur la <strong>modélisation 3D du châssis</strong>, en collaboration avec les pôles mécanique et aérodynamique.  
+          Ce projet me permet de mettre en pratique mes compétences en conception assistée par ordinateur (CAO) et d’apprendre le travail collaboratif sur un projet d’ingénierie complet.
+        </p>
+      </div>
+    </div>
+
+    <!-- Projet Kart électrique -->
+    <div class="flex flex-col md:flex-row-reverse items-center mb-20">
+      <div class="md:w-1/2">
+        <img src="../annexes/n7racing_kart.jpg" alt="N7 Racing Team - Kart électrique" class="rounded-2xl shadow-lg w-full">
+      </div>
+      <div class="md:w-1/2 md:pr-12 mt-8 md:mt-0">
+        <h3 class="text-2xl font-semibold mb-4 text-indigo-700" data-key="kartTitle">Projet Kart Électrique ⚡</h3>
+        <p class="text-lg text-gray-700 leading-relaxed" data-key="kartText">
+          En parallèle du projet monoplace, je participe également au <strong>projet karting</strong> de la N7 Racing Team.  
+          L’objectif est de <strong>convertir un kart thermique en kart électrique</strong> d’ici la fin de l’année <strong>2026</strong>.  
+          <br><br>
+          Ce projet mobilise des compétences en électronique, modélisation mécanique et intégration de composants électriques.  
+          Il s’inscrit dans une démarche de <strong>transition énergétique</strong> et d’innovation technologique, en lien avec les enjeux actuels de mobilité durable.
+        </p>
+      </div>
+    </div>
   </section>
 
   <!-- FOOTER -->
@@ -114,9 +148,14 @@
       menuStage: "Stages",
       menuPEP: "PEP",
       menuJob: "Jobs d'été",
-      pageTitle: "Titre | Ewan Maurel",
-      Title: "Titre",
-      Subtitle: "Soustitre",
+      pageTitle: "Projets et Productions | Ewan Maurel",
+      Title: "Projets et Productions",
+      Subtitle: "Mes contributions techniques au sein de la N7 Racing Team",
+      mainTitle: "Projets en cours",
+      monoTitle: "Projet Monoplace – N7 Racing Team 🏎️",
+      monoText: "Je fais partie du pôle châssis de la N7 Racing Team, l’équipe de conception automobile de l’ENSEEIHT. Notre objectif est ambitieux : concevoir et fabriquer une monoplace afin de participer à une compétition entre écoles d’ingénieurs en 2027. Mon rôle se concentre sur la modélisation 3D du châssis, en collaboration avec les pôles mécanique et aérodynamique. Ce projet me permet de mettre en pratique mes compétences en CAO et d’apprendre le travail collaboratif sur un projet d’ingénierie complet.",
+      kartTitle: "Projet Kart Électrique ⚡",
+      kartText: "En parallèle du projet monoplace, je participe également au projet karting de la N7 Racing Team. L’objectif est de transformer un kart thermique en kart électrique d’ici la fin de l’année 2026. Ce projet mobilise des compétences en électronique, modélisation mécanique et intégration électrique, dans une logique de transition énergétique et d’innovation technologique.",
       footerPhone: "Téléphone",
       footerMail: "Email",
       footerCopyright: "© 2025 Ewan Maurel - ePortfolio ENSEEIHT"
@@ -136,9 +175,14 @@
       menuStage: "Internships",
       menuPEP: "PEP",
       menuJob: "Summer Jobs",
-      pageTitle: "Title | Ewan Maurel",
-      Title: "Title",
-      Subtitle: "Subtitle",
+      pageTitle: "Projects and Productions | Ewan Maurel",
+      Title: "Projects and Productions",
+      Subtitle: "My technical contributions within the N7 Racing Team",
+      mainTitle: "Current Projects",
+      monoTitle: "Single-Seater Project – N7 Racing Team 🏎️",
+      monoText: "I am part of the chassis division of the N7 Racing Team, the ENSEEIHT automotive engineering team. Our goal is ambitious: to design and build a single-seater race car to compete in an inter-engineering school competition in 2027. My role focuses on 3D chassis modeling in collaboration with the mechanical and aerodynamic divisions. This project allows me to apply my CAD skills and learn collaborative engineering teamwork.",
+      kartTitle: "Electric Kart Project ⚡",
+      kartText: "Alongside the single-seater project, I am also contributing to the N7 Racing Team’s karting project. The goal is to convert a thermal kart into an electric one by the end of 2026. This project involves skills in electronics, mechanical modeling, and electrical integration, promoting sustainable mobility and technological innovation.",
       footerPhone: "Phone",
       footerMail: "Email",
       footerCopyright: "© 2025 Ewan Maurel - ENSEEIHT ePortfolio"
@@ -154,7 +198,7 @@
     localStorage.setItem('lang', lang);
     document.querySelectorAll("[data-key]").forEach(el=>{
       const key = el.getAttribute("data-key");
-      if(translations[lang][key]) el.textContent = translations[lang][key];
+      if(translations[lang][key]) el.innerHTML = translations[lang][key];
     });
     // Met à jour les liens internes
     document.querySelectorAll("a[href]").forEach(a=>{

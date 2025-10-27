@@ -154,7 +154,7 @@
     localStorage.setItem('lang', lang);
     document.querySelectorAll("[data-key]").forEach(el=>{
       const key = el.getAttribute("data-key");
-      if(translations[lang][key]) el.textContent = translations[lang][key];
+      if(translations[lang][key]) el.innerHTML = translations[lang][key];
     });
     // Met à jour les liens internes
     document.querySelectorAll("a[href]").forEach(a=>{
