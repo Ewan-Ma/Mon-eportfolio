@@ -7,16 +7,9 @@
   <link rel="icon" type="image/jpg" href="../annexes/photo.jpg">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
   <style>
-    @keyframes fadeIn {
-      from { opacity:0; transform:translateY(20px); }
-      to { opacity:1; transform:translateY(0); }
-    }
-    .fade-in {
-      animation: fadeIn 1s ease forwards;
-      opacity: 0;
-    }
+    @keyframes fadeIn { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+    .fade-in { animation:fadeIn 1s ease forwards; opacity:0; }
   </style>
 </head>
 
@@ -62,10 +55,8 @@
     </div>
 
     <!-- LANG -->
-    <div class="absolute top-4 right-6">
-        <button id="lang-btn" onclick="toggleLang()" class="px-3 py-1 bg-gray-200 text-black rounded hover:bg-gray-300">
-        <span data-key="EN_FR"></span>
-        </button>
+    <div class="absolute top-4 right-6 z-50">
+      <button id="lang-btn" class="px-3 py-1 bg-gray-200 text-black rounded hover:bg-gray-300" onclick="toggleLang()"><span data-key="EN_FR">EN</span></button>
     </div>
     </nav>
 
@@ -99,12 +90,31 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-gray-900 text-white py-10 fade-in">
-    <div class="container mx-auto px-6 text-center text-gray-400 text-sm" data-key="footerCopyright"></div>
-    </footer>
+  <footer id="contact" class="bg-gray-900 text-white py-10 fade-in">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 text-center md:text-left gap-8">
+        <div>
+          <p class="font-semibold text-center mb-2" data-key="footerPhone">Téléphone</p>
+          <p class="font-semibold text-center mb-2"><a href="tel:+33769914159" class="hover:underline">+33 7 69 91 41 59</a></p>
+        </div>
+        <div>
+          <p class="font-semibold text-center mb-2" data-key="footerMail">Email</p>
+          <p class="font-semibold text-center mb-2"><a href="mailto:ewan.maurel@etu.inp-n7.fr" class="hover:underline">ewan.maurel@etu.inp-n7.fr</a></p>
+        </div>
+        <div>
+          <p class="font-semibold text-center mb-2">LinkedIn</p>
+          <p class="font-semibold text-center mb-2"><a href="https://www.linkedin.com/in/ewan-maurel" target="_blank" class="hover:underline">linkedin.com/in/ewan-maurel</a></p>
+        </div>
+      </div>
+      <div class="text-center text-gray-400 text-sm mt-10" data-key="footerCopyright">
+        © 2025 Ewan Maurel - ePortfolio ENSEEIHT
+      </div>
+    </div>
+  </footer>
 
-    <script>
-    const translations = {
+  <!-- JS TRADUCTION + FADE-IN -->
+  <script>
+  const translations = {
     fr: {
         EN_FR: "EN",
         menuTitle: "ENSEEIHT e-Portfolio",
@@ -154,24 +164,56 @@
     };
 
     function getLang() {
-    const params = new URLSearchParams(window.location.search);
-    return params.get("lang") || localStorage.getItem("lang") || "fr";
-    }
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('lang') || localStorage.getItem('lang') || 'fr';
+  }
 
-    function setLang(lang) {
-    localStorage.setItem("lang", lang);
-    document.querySelectorAll("[data-key]").forEach(el => {
-        const key = el.dataset.key;
-        if (translations[lang][key]) el.innerHTML = translations[lang][key];
+  function setLang(lang) {
+    localStorage.setItem('lang', lang);
+    document.querySelectorAll("[data-key]").forEach(el=>{
+      const key = el.getAttribute("data-key");
+      if(translations[lang][key]) el.innerHTML = translations[lang][key];
     });
+    // Met à jour les liens internes
+    document.querySelectorAll("a[href]").forEach(a=>{
+      const href = a.getAttribute("href");
+      if(href && href.endsWith(".html")){
+        const newUrl = href.includes("?lang=") ? href.replace(/lang=\w+/,"lang="+lang) : href+"?lang="+lang;
+        a.setAttribute("href", newUrl);
+      }
+    });
+  }
+
+  function switchLang(newLang){
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', newLang);
+    window.location.href = url.toString();
+  }
+
+  function toggleLang() {
+    const btn = document.getElementById("lang-btn");
+    if (btn.textContent.trim() === "EN") {
+      switchLang('en');
+    } else {
+      switchLang('fr');
     }
+  }
 
-    function toggleLang() {
-    setLang(getLang() === "fr" ? "en" : "fr");
-    }
+  const lang = getLang();
+  setLang(lang);
 
-    setLang(getLang());
-    </script>
-
+  // FADE-IN
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = { threshold:0.1, rootMargin:"0px 0px -50px 0px" };
+  const appearOnScroll = new IntersectionObserver((entries, observer)=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting) return;
+      entry.target.style.opacity=1;
+      entry.target.style.transform='translateY(0)';
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+  faders.forEach(fader=>appearOnScroll.observe(fader));
+  </script>
 </body>
 </html>
