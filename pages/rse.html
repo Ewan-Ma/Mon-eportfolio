@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-key="pageTitle"></title>
+  <link rel="icon" type="image/jpg" href="../annexes/photo.jpg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    @keyframes fadeIn {
+      from { opacity:0; transform:translateY(20px); }
+      to { opacity:1; transform:translateY(0); }
+    }
+    .fade-in {
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- NAVIGATION -->
+    <nav class="bg-gray-900 text-white px-6 py-4 sticky top-0 z-40 shadow">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="../index.html" class="text-xl font-bold hover:text-blue-400" data-key="menuTitle"></a>
+
+        <ul class="flex space-x-6">
+
+        <li class="relative group">
+            <button class="hover:text-blue-400 flex items-center" data-key="menuEngineer"></button>
+            <ul class="absolute left-0 mt-2 w-44 bg-gray-800 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+            <li><a href="n7.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuN7"></a></li>
+            <li><a href="projectprod.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuPP"></a></li>
+            </ul>
+        </li>
+
+        <li><a href="mobility.html" class="hover:text-blue-400" data-key="menuMobility"></a></li>
+
+        <li class="relative group">
+            <button class="hover:text-blue-400 flex items-center" data-key="menuEngagement"></button>
+            <ul class="absolute left-0 mt-2 w-52 bg-gray-800 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+            <li><a href="civic.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuCivic"></a></li>
+            <li><a href="devdur.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuDev"></a></li>
+            <li><a href="rse.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuRSE"></a></li>
+            </ul>
+        </li>
+
+        <li><a href="activities.html" class="hover:text-blue-400" data-key="menuActivities"></a></li>
+
+        <li class="relative group">
+            <button class="hover:text-blue-400 flex items-center" data-key="menuCareer"></button>
+            <ul class="absolute left-0 mt-2 w-52 bg-gray-800 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+            <li><a href="internship.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuStage"></a></li>
+            <li><a href="pep.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuPEP"></a></li>
+            <li><a href="job.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuJob"></a></li>
+            </ul>
+        </li>
+        </ul>
+    </div>
+
+    <!-- LANG -->
+    <div class="absolute top-4 right-6">
+        <button id="lang-btn" onclick="toggleLang()" class="px-3 py-1 bg-gray-200 text-black rounded hover:bg-gray-300">
+        <span data-key="EN_FR"></span>
+        </button>
+    </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="bg-gradient-to-r from-blue-700 to-purple-700 text-white py-10 fade-in">
+    <div class="container mx-auto text-center">
+        <h1 class="text-5xl font-bold" data-key="Title"></h1>
+        <p class="mt-4 text-lg" data-key="Subtitle"></p>
+    </div>
+    </header>
+
+    <!-- CONTENU -->
+    <section class="container mx-auto px-6 py-16 fade-in">
+
+    <!-- AFFICHE -->
+    <div class="mb-12">
+        <img src="../annexes/affiche_rse_4l.jpg"
+            alt="Affiche Engagement RSE 4L Trophy"
+            class="w-full max-h-[600px] object-contain rounded-2xl shadow-lg mx-auto">
+    </div>
+
+    <!-- TEXTE -->
+    <div class="max-w-3xl mx-auto text-center">
+        <p class="text-lg text-gray-700 leading-relaxed mb-6" data-key="rseText"></p>
+
+        <a href="civic.html#4l-trophy"
+        class="text-blue-600 font-semibold hover:underline text-lg"
+        data-key="rseLink"></a>
+    </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-10 fade-in">
+    <div class="container mx-auto px-6 text-center text-gray-400 text-sm" data-key="footerCopyright"></div>
+    </footer>
+
+    <script>
+    const translations = {
+    fr: {
+        EN_FR: "EN",
+        menuTitle: "ENSEEIHT e-Portfolio",
+        menuEngineer: "Parcours Ingénieur ▾",
+        menuN7: "Cours à l'ENSEEIHT",
+        menuPP: "Projets et Productions",
+        menuMobility: "Mobilité Internationale",
+        menuEngagement: "Engagement ▾",
+        menuCivic: "Engagement Civique",
+        menuDev: "Développement durable",
+        menuRSE: "Engagement RSE",
+        menuActivities: "Autres Activités",
+        menuCareer: "Développement de Carrière ▾",
+        menuStage: "Stages",
+        menuPEP: "PEP",
+        menuJob: "Jobs d'été",
+        pageTitle: "Engagement RSE | Ewan Maurel",
+        Title: "Engagement RSE",
+        Subtitle: "Responsabilité, solidarité et engagement associatif",
+        rseText: "Dans le cadre de l’engagement <strong>Responsabilité Sociétale des Entreprises (RSE)</strong> de mon école d’ingénieur, j’ai présenté le projet humanitaire du <strong>4L Trophy</strong>. Ce projet met en avant des valeurs de solidarité, d’engagement citoyen et de développement durable, en cohérence avec les principes de la RSE.",
+        rseLink: "Cliquer ici pour en savoir plus →",
+        footerCopyright: "© 2025 Ewan Maurel - ePortfolio ENSEEIHT"
+    },
+    en: {
+        EN_FR: "FR",
+        menuTitle: "ENSEEIHT e-Portfolio",
+        menuEngineer: "Engineering Path ▾",
+        menuN7: "N7 Courses",
+        menuPP: "Projects and Productions",
+        menuMobility: "International Mobility",
+        menuEngagement: "Engagement ▾",
+        menuCivic: "Civic Engagement",
+        menuDev: "Sustainability",
+        menuRSE: "CSR Commitment",
+        menuActivities: "Other Activities",
+        menuCareer: "Career Development ▾",
+        menuStage: "Internships",
+        menuPEP: "PEP",
+        menuJob: "Summer Jobs",
+        pageTitle: "CSR Commitment | Ewan Maurel",
+        Title: "CSR Commitment",
+        Subtitle: "Responsibility, solidarity and social commitment",
+        rseText: "As part of my engineering school’s <strong>Corporate Social Responsibility (CSR)</strong> program, I presented the humanitarian <strong>4L Trophy</strong> project. This initiative highlights values of solidarity, civic engagement and sustainable development.",
+        rseLink: "Click here to learn more →",
+        footerCopyright: "© 2025 Ewan Maurel - ENSEEIHT ePortfolio"
+    }
+    };
+
+    function getLang() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("lang") || localStorage.getItem("lang") || "fr";
+    }
+
+    function setLang(lang) {
+    localStorage.setItem("lang", lang);
+    document.querySelectorAll("[data-key]").forEach(el => {
+        const key = el.dataset.key;
+        if (translations[lang][key]) el.innerHTML = translations[lang][key];
+    });
+    }
+
+    function toggleLang() {
+    setLang(getLang() === "fr" ? "en" : "fr");
+    }
+
+    setLang(getLang());
+    </script>
+
+</body>
+</html>

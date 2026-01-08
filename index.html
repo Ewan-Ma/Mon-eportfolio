@@ -33,10 +33,11 @@
 
         <!-- Engagement -->
         <li class="relative group">
-          <button class="hover:text-blue-400 flex items-center" data-key="menuEngagement">Engagement ▾</button>
+          <button class="hover:text-blue-400 flex items-center" data-key="menuEngagement"></button>
           <ul class="absolute left-0 mt-2 w-52 bg-gray-800 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
             <li><a href="pages/civic.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuCivic"></a></li>
             <li><a href="pages/devdur.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuDev"></a></li>
+            <li><a href="pages/rse.html" class="block px-4 py-2 hover:bg-gray-700" data-key="menuRSE"></a></li>
           </ul>
         </li>
 
@@ -107,31 +108,60 @@
   <section id="projects" class="py-16 container mx-auto px-6 fade-in">
     <div class="container mx-auto px-6">
       <h2 class="text-3xl font-bold mb-6 text-center" data-key="skillsTitle">Compétences</h2>
+
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+
+        <!-- Exemple d'une carte -->
+        <div class="relative group p-6 bg-white rounded-xl shadow hover:shadow-lg transition cursor-pointer backdrop-blur-sm">
           <h3 class="text-xl font-semibold mb-3">💻 <span data-key="skillProgTitle">Programmation</span></h3>
-          <p data-key="skillProgText">Python, C</p>
+
+          <!-- Infobulle -->
+          <div class="absolute inset-0 bg-white/70 backdrop-blur-md rounded-xl flex items-center justify-center 
+                      opacity-0 group-hover:opacity-100 transition duration-300 p-4 text-sm">
+            <p data-key="skillProgText" class="text-gray-800">Python, C</p>
+          </div>
         </div>
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+
+        <div class="relative group p-6 bg-white rounded-xl shadow hover:shadow-lg transition cursor-pointer">
           <h3 class="text-xl font-semibold mb-3">📑 <span data-key="skillOfficeTitle">Bureautique</span></h3>
-          <p data-key="skillOfficeText">Outils de bureautique, travail collaboratif</p>
+          <div class="absolute inset-0 bg-white/70 backdrop-blur-md rounded-xl flex items-center justify-center 
+                      opacity-0 group-hover:opacity-100 transition duration-300 p-4 text-sm">
+            <p data-key="skillOfficeText">Outils de bureautique, travail collaboratif</p>
+          </div>
         </div>
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+
+        <div class="relative group p-6 bg-white rounded-xl shadow hover:shadow-lg transition cursor-pointer">
           <h3 class="text-xl font-semibold mb-3">🧩 <span data-key="skillTeamTitle">Travail en équipe</span></h3>
-          <p data-key="skillTeamText">Encadrement associatif, gestion de projets collectifs</p>
+          <div class="absolute inset-0 bg-white/70 backdrop-blur-md rounded-xl flex items-center justify-center 
+                      opacity-0 group-hover:opacity-100 transition duration-300 p-4 text-sm">
+            <p data-key="skillTeamText">Encadrement associatif, gestion de projets collectifs</p>
+          </div>
         </div>
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+
+        <div class="relative group p-6 bg-white rounded-xl shadow hover:shadow-lg transition cursor-pointer">
           <h3 class="text-xl font-semibold mb-3">🔧 <span data-key="skill3DTitle">Modélisation 3D</span></h3>
-          <p data-key="skill3DText">Initiation à la conception et au prototypage 3D</p>
+          <div class="absolute inset-0 bg-white/70 backdrop-blur-md rounded-xl flex items-center justify-center 
+                      opacity-0 group-hover:opacity-100 transition duration-300 p-4 text-sm">
+            <p data-key="skill3DText">Initiation à la conception et au prototypage 3D</p>
+          </div>
         </div>
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+
+        <div class="relative group p-6 bg-white rounded-xl shadow hover:shadow-lg transition cursor-pointer">
           <h3 class="text-xl font-semibold mb-3">🌍 <span data-key="skillLangTitle">Langues</span></h3>
-          <p data-key="skillLangText">Anglais (B2), Espagnol (A2+), LSF (initiation)</p>
+          <div class="absolute inset-0 bg-white/70 backdrop-blur-md rounded-xl flex items-center justify-center 
+                      opacity-0 group-hover:opacity-100 transition duration-300 p-4 text-sm">
+            <p data-key="skillLangText">Anglais (B2), Espagnol (A2+), LSF (initiation)</p>
+          </div>
         </div>
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+
+        <div class="relative group p-6 bg-white rounded-xl shadow hover:shadow-lg transition cursor-pointer">
           <h3 class="text-xl font-semibold mb-3">🤔 <span data-key="skillCurieuxTitle">Curiosité</span></h3>
-          <p data-key="skillCurieuxText">Ouverture d'esprit (Cours d'électronique, Projet du 4L Trophy, Programmation, Sport, Intérim...)</p>
+          <div class="absolute inset-0 bg-white/70 backdrop-blur-md rounded-xl flex items-center justify-center 
+                      opacity-0 group-hover:opacity-100 transition duration-300 p-4 text-sm">
+            <p data-key="skillCurieuxText">Ouverture d'esprit (Électronique, 4L Trophy, Programmation, Sport, Intérim, ...)</p>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -172,6 +202,7 @@
       menuEngagement: "Engagement ▾",
       menuCivic: "Engagement Civique",
       menuDev: "Développement durable",
+      menuRSE: "Engagement RSE",
       menuActivities: "Autres Activités",
       menuCareer: "Développement de Carrière ▾",
       menuStage: "Stages",
@@ -211,6 +242,7 @@
       menuEngagement: "Engagement ▾",
       menuCivic: "Civic Engagement",
       menuDev: "Sustainibility",
+      menuRSE: "CSR Commitment",
       menuActivities: "Other Activities",
       menuCareer: "Career Development ▾",
       menuStage: "Internships",
