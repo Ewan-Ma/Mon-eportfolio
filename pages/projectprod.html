@@ -92,21 +92,39 @@
 
     <!-- Projet Kart électrique -->
     <div class="flex flex-col md:flex-row-reverse items-center mb-20">
-      <div class="md:w-1/2">
-        <img src="../annexes/n7racing_kart.jpg" alt="N7 Racing Team - Kart électrique" class="rounded-2xl shadow-lg w-full">
+      
+      <!-- CARROUSEL KART -->
+      <div class="md:w-1/2 relative rounded-2xl overflow-hidden shadow-lg">
+        <div id="carousel-kart" class="relative w-full h-72 md:h-96 overflow-hidden rounded-2xl">
+          <img src="../annexes/n7racing_kart.jpg" alt="N7 Racing Team - Kart avant transformation" class="w-full h-full object-cover absolute inset-0 opacity-100 transition-opacity duration-1000">
+          <img src="../annexes/kart.jpg" alt="N7 Racing Team - Kart électrique après transformation" class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="../annexes/resultat.jpg" alt="N7 Racing Team - Résultats ENEDIS EV Challenge" class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-1000">
+        </div>
+
+        <!-- BOUTONS -->
+        <button id="prev-kart" class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/70">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="next-kart" class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/70">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- PETITS POINTS -->
+        <div id="dots-kart" class="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          <span class="dot w-3 h-3 bg-white/50 rounded-full cursor-pointer transition-all duration-300"></span>
+          <span class="dot w-3 h-3 bg-white/50 rounded-full cursor-pointer transition-all duration-300"></span>
+          <span class="dot w-3 h-3 bg-white/50 rounded-full cursor-pointer transition-all duration-300"></span>
+        </div>
       </div>
+
+      <!-- TEXTE -->
       <div class="md:w-1/2 md:pr-12 mt-8 md:mt-0">
         <h3 class="text-2xl font-semibold mb-4 text-indigo-700" data-key="kartTitle">Projet Kart Électrique ⚡</h3>
         <p class="text-lg text-gray-700 leading-relaxed" data-key="kartText">
-          En parallèle du projet monoplace, je participe également au <strong>projet karting</strong> de la N7 Racing Team.  
-          L’objectif est de <strong>convertir un kart thermique en kart électrique</strong> d’ici la fin de l’année <strong>2026</strong>.  
-          <br><br>
-          Ce projet mobilise des compétences en électronique, modélisation mécanique et intégration de composants électriques.  
-          Il s’inscrit dans une démarche de <strong>transition énergétique</strong> et d’innovation technologique, en lien avec les enjeux actuels de mobilité durable.
+          En parallèle du projet monoplace, je participe au projet karting de la N7 Racing Team. Nous avons mené à bien la transformation d'un kart thermique en kart électrique. En juin 2026, nous avons participé à l'ENEDIS EV Challenge à Limoges avec pour objectifs la vitesse et l'endurance sur 2 heures. Le kart a tenu toute la journée sans aucune casse ! Pour la prochaine compétition en juin 2027, l'objectif est de fiabiliser certains points et d'implémenter un système de communication avec le stand.
         </p>
       </div>
     </div>
-  </section>
 
   <!-- FOOTER -->
   <footer id="contact" class="bg-gray-900 text-white py-10 fade-in">
@@ -157,7 +175,7 @@
       monoTitle: "Projet Monoplace – N7 Racing Team 🏎️",
       monoText: "Je fais partie du pôle châssis de la N7 Racing Team, l’équipe de conception automobile de l’ENSEEIHT. Notre objectif est ambitieux : concevoir et fabriquer une monoplace afin de participer à Formula Student, une compétition entre écoles d’ingénieurs, en 2027. Nous nous répartissons les tâches entre les différents pôles (électronique, aero, data et mécanique), au sain de mon pôle, mon rôle se concentre sur la modélisation 3D du châssis. Ce projet me permet de mettre en pratique mes compétences en CAO et d’apprendre le travail collaboratif sur un projet d’ingénierie complet.",
       kartTitle: "Projet Kart Électrique ⚡",
-      kartText: "En parallèle du projet monoplace, je participe également au projet karting de la N7 Racing Team. L’objectif est de transformer un kart thermique en kart électrique d’ici la fin de l’année 2026. Ce projet mobilise des compétences en électronique, modélisation mécanique et intégration électrique, dans une logique de transition énergétique et d’innovation technologique.",
+      kartText: "En parallèle du projet monoplace, je participe au projet karting de la N7 Racing Team. Nous avons mené à bien la transformation d'un kart thermique en kart électrique. En juin 2026, nous avons participé à l'ENEDIS EV Challenge à Limoges avec pour objectifs la vitesse et l'endurance sur 2 heures. Le kart a tenu toute la journée sans aucune casse ! Pour la prochaine compétition en juin 2027, l'objectif est de fiabiliser certains points et d'implémenter un système de communication avec le stand.",
       footerPhone: "Téléphone",
       footerMail: "Email",
       footerCopyright: "© 2025 Ewan Maurel - ePortfolio ENSEEIHT"
@@ -186,7 +204,7 @@
       monoTitle: "Single-Seater Project – N7 Racing Team 🏎️",
       monoText: "I am part of the chassis division of the N7 Racing Team, the automotive design team of ENSEEIHT. Our ambitious goal is to design and build a single-seater to compete in Formula Student, an engineering school competition, in 2027. Tasks are divided among different divisions (electronics, aerodynamics, data, and mechanics). Within my division, my role focuses on the 3D modeling of the chassis. This project allows me to apply my CAD skills and learn collaborative work on a complete engineering project.",
       kartTitle: "Electric Kart Project ⚡",
-      kartText: "Alongside the single-seater project, I am also taking part in the N7 Racing Team’s karting project. The goal is to convert a combustion-engine kart into an electric kart by the end of 2026. This project involves skills in electronics, mechanical modeling, and electrical integration, all within a framework of energy transition and technological innovation.",
+      kartText: "Alongside the single-seater project, I am part of the N7 Racing Team's karting project. We successfully converted a combustion-engine kart into an electric one. In June 2026, we participated in the ENEDIS EV Challenge in Limoges, focusing on speed and a 2-hour endurance test. The kart performed brilliantly and made it to the end of the day without breaking down! For the upcoming competition in June 2027, our goal is to improve reliability on certain points and implement a pit-to-kart communication system.",
       footerPhone: "Phone",
       footerMail: "Email",
       footerCopyright: "© 2025 Ewan Maurel - ENSEEIHT ePortfolio"
@@ -244,6 +262,54 @@
     });
   }, appearOptions);
   faders.forEach(fader=>appearOnScroll.observe(fader));
+
+  // --- CARROUSEL KART ÉLECTRIQUE ---
+  const imagesKart = document.querySelectorAll("#carousel-kart img");
+  const dotsKart = document.querySelectorAll("#dots-kart .dot");
+  let currentKart = 0;
+  const totalKart = imagesKart.length;
+  const intervalTimeKart = 10000; // 10 secondes (modifiable si besoin)
+
+  function showImageKart(index) {
+    imagesKart.forEach((img, i) => {
+      img.style.opacity = i === index ? "1" : "0";
+    });
+    dotsKart.forEach((dot, i) => {
+      dot.classList.toggle("bg-white", i === index);
+      dot.classList.toggle("bg-white/50", i !== index);
+      dot.classList.toggle("w-4", i === index);
+      dot.classList.toggle("h-4", i === index);
+    });
+  }
+
+  // Navigation flèches
+  document.getElementById("prev-kart").addEventListener("click", () => {
+    currentKart = (currentKart - 1 + totalKart) % totalKart;
+    showImageKart(currentKart);
+  });
+
+  document.getElementById("next-kart").addEventListener("click", () => {
+    currentKart = (currentKart + 1) % totalKart;
+    showImageKart(currentKart);
+  });
+
+  // Navigation via clic sur les points
+  dotsKart.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      currentKart = i;
+      showImageKart(currentKart);
+    });
+  });
+
+  // Défilement automatique (optionnel, comme pour le 4L)
+  setInterval(() => {
+    currentKart = (currentKart + 1) % totalKart;
+    showImageKart(currentKart);
+  }, intervalTimeKart);
+
+  // Initialisation
+  showImageKart(currentKart);
+
   </script>
 </body>
 </html>
